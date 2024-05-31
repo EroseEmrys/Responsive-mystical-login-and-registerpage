@@ -5,13 +5,13 @@ Great! You already have a GitHub repository set up. Here’s how you can create 
 ```markdown
 # Responsive Mystical Login and Register Page
 
-A responsive registration and login form with various input types, including text, email, password, and a select dropdown. The forms include HTML5 validation attributes to ensure correct data entry. The design features a mythical video game-inspired background with a visually appealing overlay and blurred input fields.
+A responsive registration and login form with various input types, including text, email, password. The forms include HTML5 validation attributes to ensure correct data entry. The design features a mythical video game-inspired background with a visually appealing overlay and blurred input fields.
 
 ## Features
 
 - Responsive design
 - HTML5 form validation
-- Various input types (text, email, password, select, checkbox)
+- Various input types (text, email, password)
 - Styled using CSS with backdrop filter and box-shadow effects
 
 ## Usage

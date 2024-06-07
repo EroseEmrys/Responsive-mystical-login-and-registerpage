@@ -7,8 +7,11 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Loader -->
     <div class="loader"></div>
-    <div class="overlay">
+
+    <!-- Login Form -->
+    <div class="overlay" id="login-form">
         <div class="wrapper">
             <h1>Welcome Again</h1>
             <form action="/submit" method="post">
@@ -19,19 +22,50 @@
                     <input type="password" id="password" placeholder="Enter Your Password" required>
                 </div>
                 <div>
-                    <a href="#" class="Frogot">Forgot Password</a>
+                    <a href="#" class="forgot">Forgot Password</a>
                 </div>
                 <div>
                     <button type="submit" class="button-17 login">Login</button>
                 </div>
                 <div>
-                    <a href="SignIn.html" class="new">You Don't Have an Account</a>
+                    <a href="#" class="new" onclick="toggleForms()">You Don't Have an Account</a>
                 </div>
             </form>
         </div>
     </div>
-    
+
+    <!-- Registration Form -->
+    <div class="overlay" id="register-form" style="display: none;">
+        <div class="wrapper">
+            <h1>Welcome</h1>
+            <form action="/submit" method="post">
+                <div class="input">
+                    <input type="text" id="Fname" name="Fname" placeholder="What is Your First Name" required>
+                </div>
+                <div class="input">
+                    <input type="text" id="Lname" name="Lname" placeholder="What is Your Last Name" required>
+                </div>
+                <div class="input">
+                    <input type="tel" id="Phone" name="Phone" placeholder="Enter Your Phone Number" required>
+                </div>
+                <div class="input">
+                    <input type="password" id="password" name="password" placeholder="Enter Your Password" required>
+                </div>
+                <div class="input">
+                    <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Your Password" required>
+                </div>
+                <div>
+                    <button type="submit" class="button-17">Register</button>
+                </div>
+                <div>
+                    <a href="#" class="new" onclick="toggleForms()">You Already Have an Account</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <script>
+        // JavaScript to hide the loader
         window.addEventListener('load', function() {
             const loader = document.querySelector('.loader');
             loader.classList.add('loader--hidden');
@@ -39,6 +73,19 @@
                 document.body.removeChild(loader);
             });
         });
+
+        // JavaScript to toggle between forms
+        function toggleForms() {
+            const loginForm = document.getElementById('login-form');
+            const registerForm = document.getElementById('register-form');
+            if (loginForm.style.display === 'none') {
+                loginForm.style.display = 'flex';
+                registerForm.style.display = 'none';
+            } else {
+                loginForm.style.display = 'none';
+                registerForm.style.display = 'flex';
+            }
+        }
     </script>
 </body>
 </html>
